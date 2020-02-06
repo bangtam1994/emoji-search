@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Footer from "./components/Footer";
+
+import Search from "./components/Search";
 
 function App() {
+  const [search, setSearch] = useState("");
+  //L'état de ce que je rentre dans ma barre search
+
+  //handleSearch va changer l'état de search dès que je modifie ma saisie
+  const handleSearch = event => {
+    setSearch(event.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Search search={search} handleSearch={handleSearch} />
+
+      <Footer />
     </div>
   );
 }
