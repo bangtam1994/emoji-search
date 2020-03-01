@@ -4,8 +4,7 @@ import data from "../data.json";
 
 // const [copySuccess, setCopySuccess] = useState("");
 // const copyToClipboard = event => {
-//   setCopySuccess(event);
-/*data[0] = {
+//   setCopySuccess(event);/*data[0] = {
     "title": "100",
     "symbol": "💯",
     "keywords": "100 hundred points symbol symbol wow wow win win perfect perfect parties parties"
